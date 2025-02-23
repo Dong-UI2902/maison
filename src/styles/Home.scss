@@ -1,0 +1,11 @@
+/*=============== HOME ===============*/
+.home {
+  padding: 5rem 0 0rem;
+
+  &__container {
+    position: relative;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+  }
+}

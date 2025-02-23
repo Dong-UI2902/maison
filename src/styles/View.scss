@@ -1,0 +1,358 @@
+//=================================
+.view {
+  &__btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    width: 100%;
+
+    .button-75 {
+      align-items: center;
+      background: var(--price-color);
+      border: 0;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+      font-weight: 600;
+      height: 40px;
+      justify-content: center;
+      letter-spacing: .4px;
+      line-height: 1;
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 3px;
+      text-decoration: none;
+      text-transform: uppercase;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+
+    .button-75:active {
+      outline: 0;
+    }
+
+    .button-75:hover {
+      outline: 0;
+    }
+
+    .button-75 span {
+      transition: all 200ms;
+      animation-delay: 1s;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-name: pulse;
+      -webkit-animation-iteration-count: infinite;
+    }
+
+    .button-75:hover span {
+      transform: scale(.9);
+      opacity: .75;
+    }
+
+    @media screen and (max-width: 991px) {
+      .button-75 {
+        font-size: 15px;
+        height: 40px;
+      }
+
+      .button-75 span {
+        line-height: 50px;
+      }
+    }
+  }
+
+  &__container {
+    gap: 1rem;
+    padding-top: 2rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .container__detail {
+    gap: 0.5rem;
+    padding-top: 2rem;
+    margin: 0 auto;
+  }
+
+  &__title {
+    a {
+      font-weight: 550;
+      font-size: 0.9rem;
+    }
+
+    span {
+      padding: 0 0.7rem;
+      background-color: var(--first-color);
+      border-radius: 0.5rem;
+      color: #FFFFFF;
+    }
+
+    &-thuonghieu {
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        color: black;
+        font-size: 1rem;
+      }
+    }
+    i {
+      color: var(--price-color);
+    }
+  }
+
+  &__image {
+    img {
+      display: block;
+      margin: 0 auto;
+      padding-top: 2rem;
+      transition: .3s;
+    }
+
+    .carousel {
+      position: relative;
+      padding-top: 2rem;
+    }
+
+    .carousel__images {
+      display: flex;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .carousel__image-selected {
+      border: 3px solid #ffa700!important;
+    }
+
+    .carousel__image {
+      margin-right: 10px;
+      height: 50px;
+      min-width: 50px;
+      border: 3px solid #ffa70000;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #444444;
+    }
+
+    .carousel__button {
+      position: absolute;
+      top: 40%;
+    }
+
+    .carousel__button-left {
+      left: 10px;
+    }
+
+    .carousel__button-right {
+      right: 10px;
+    }
+
+    @media only screen and (max-width: 900px) {
+      .selected-image {
+        height: 350px;
+      }
+      //
+      //.carousel__image {
+      //  height: 50px;
+      //  min-width: 50px;
+      //}
+    }
+  }
+
+  &__body {
+    &-status {
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        p {
+          font-weight: 400;
+        }
+
+        &:first-child {
+          p {
+            &:first-child {
+              font-weight: normal;
+            }
+
+            &:last-child {
+              color: #17a2b8;
+              font-weight: 600;
+            }
+          }
+          margin-right: 10px;
+        }
+
+        &:last-child {
+          p {
+            &:first-child {
+              text-decoration: line-through;
+              color: #6c757d;
+            }
+
+            &:last-child {
+              color: var(--price-color);
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__policy {
+    font-size: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #F7F7F7;
+    border-top: 1px solid #F7F7F7;
+
+    div {
+      display: flex;
+      align-items: flex-end;
+      gap: 0.2rem;
+
+      i {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__standard {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    position: relative;
+
+    &-card {
+      border: 1px solid #d8d7d8;
+      border-radius: 0.5rem;
+      display: flex;
+      padding: 0.5rem;
+      position: relative;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      img {
+        position: relative;
+        width: 28px;
+        height: 28px;
+        margin-right: 0.5rem;
+      }
+
+      div {
+        font-size: 11px;
+        align-self: center;
+      }
+    }
+
+    .active {
+      border: 1px solid #ffa700;
+      &:before {
+        content: "Ưu Đãi Giới Hạn";
+        position: absolute;
+        background: #d72229;
+        width: 80px;
+        height: 14px;
+        border-radius: 4px;
+        font-size: 10px;
+        color: #fff;
+        text-align: center;
+        right: 0;
+        left: 0;
+        bottom: -7px;
+        margin: 0 auto;
+      }
+    }
+
+    .outProd {
+      text-decoration: line-through;
+    }
+  }
+
+  &__button {
+    a {
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      background-color: var(--price-color);
+      border-radius: 5px;
+      width: 100%;
+    }
+  }
+
+  &__detail {
+    p:first-child {
+      margin-bottom: 1rem;
+      border-top: 1px solid #d8d7d8;
+      padding-top: 1rem;
+    }
+
+    position: relative;
+    width: 100%;
+
+    //&-attribute {
+    //  display: flex;
+    //  justify-content: left;
+    //  gap: 1rem;
+    //
+    //  div {
+    //    row-gap: 1rem;
+    //    margin: 5px 0;
+    //
+    //    &:first-child {
+    //      min-width: 120px;
+    //      font-weight: 550;
+    //      font-size: 14px;
+    //    }
+    //
+    //    &:last-child {
+    //      font-size: 14px;
+    //      line-break: anywhere;
+    //    }
+    //  }
+    //}
+  }
+
+  &__price {
+    background-color: #F8F9FA;
+    padding: 10px;
+    border-radius: 0.5rem;
+    p {
+      color: black;
+
+      &:first-child {
+        font-size: 1.5rem;
+
+        span {
+          font-weight: 550;
+          color: var(--price-color);
+        }
+      }
+
+    }
+
+    &-thitruong {
+      font-size: 0.8rem;
+      color: unset!important;
+    }
+
+    small {
+      color: black;
+    }
+  }
+}

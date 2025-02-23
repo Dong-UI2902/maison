@@ -1,0 +1,98 @@
+/*=============== PRODUCTS ===============*/
+.product {
+  .section {
+    padding: 0;
+  }
+  &__description {
+    text-align: center;
+  }
+  &__container {
+    padding: 3rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 3rem;
+  }
+  &__card {
+    display: grid;
+    position: relative;
+    min-height: 235px;
+
+    &:hover .product__img {
+      transform: translateY(-0.5rem);
+    }
+  }
+  &__img {
+    position: relative;
+    width: 120px;
+    justify-self: center;
+    margin-bottom: var(--mb-0-75);
+    transition: 0.3s;
+    margin-top: 20px;
+  }
+  &__title,
+  &__price {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+  }
+
+  &__price {
+    color: var(--price-color);
+  }
+
+  &__title {
+    margin-bottom: 0.25rem;
+    color: var(--title-color);
+  }
+  &__button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 0.25rem;
+    border-radius: 0.35rem;
+    font-size: 1.15rem;
+
+    &:hover {
+      background-color: var(--first-color-alt);
+    }
+  }
+  &__circle {
+    width: 90px;
+    height: 90px;
+    background-color: var(--first-color-lighten);
+    border-radius: 50%;
+    position: absolute;
+    top: 18%;
+    left: 5%;
+  }
+
+  &__carousel {
+    position: relative;
+    padding-bottom: 30px;
+
+    &__card {
+      max-width: 185px;
+      margin: 0 auto;
+    }
+  }
+
+  .uudai {
+    font-size: 10px;
+    color: #d72229;
+    font-weight: bold;
+    text-align: start;
+    position: absolute;
+    z-index: 20;
+  }
+
+  .sale {
+    position: absolute;
+    top: 14px;
+    z-index: 30;
+    font-size: 12px;
+    background-color: #d72229;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+}
